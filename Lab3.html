@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LAB 3</title>
+  </head>
+  <body>
+    <h3>First Control</h3>
+    <form>
+      <a>Please Enter your Email Address</a>
+      E-Mail: <input type="text" name="email" id="email" /> <br />
+      <input type="reset" />
+    </form>
+    <h3>Second Control</h3>
+    <label for="color">Choose a Colour</label>
+    <input type="text" name="color" id="color" list="colors" />
+    <datalist id="colors">
+      <option value="red" label="Red"></option>
+      <option value="green" label="Green"></option>
+      <option value="blue" label="Blue"></option>
+      <option value="yellow" label="Yellow"></option>
+      <option value="pink" label="Pink"></option>
+      <option value="black" label="Black"></option>
+    </datalist>
+    <h3>Third Control</h3>
+    <label for="myChoice">
+      Choose a number between 1 and 100:<br />
+      Low
+      <input type="range" name="myChoice" id="myChoice" min="1" max="100" />
+      High
+      <br />
+    </label>
+    <h3>Fourth Control</h3>
+    <label for="myColor">Choose a Colour:</label>
+    <input type="color" name="myColor" id="myColor"></input>
+
+    <h3>Fifth Control</h3>
+    <fieldset><legend>Customer Information</legend>
+    <label>Name:
+      <input type="text" name="Name" id="Name">
+    </label>
+    <br><br>
+    <label>Email:
+      <input type="text" name="Email" id="Email">
+    </label>
+    </fieldset>
+  </body>
+</html>
