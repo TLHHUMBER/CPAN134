@@ -1,0 +1,69 @@
+<html>
+    <head>
+        <title>This is my first form</title>
+    </head>
+    <body>
+        <fieldset><legend>Login Information</legend>
+        <form action="processMyInput.php" method = "post" name="myFIrstForm" id="myFirstForm"></form>
+        <form>Email: <input type = "text" id = "email" name = "email" maxlength="30" tabindex="1"></form>
+        <br>
+        <br>
+        <form>Username: <input type = "text" id = "username" name = "username" maxlength="30" tabindex="2"></form>
+        <br>
+        <br>
+        <form>Password: <input type = "text" id = "password" name = "password" maxlength="30"tabindex="3"></form>
+        <br>
+        <br>
+    </fieldset>
+        <br>
+        <br>
+        <input type="checkbox" name="checkbox1" id ="checkbox1id" value = "Html" tabindex="4">
+        <label for="checkbox1id">HTML</label>
+        <br>
+        <input type="checkbox" name="checkbox2" id ="checkbox2id" value = "CSS" tabindex="5">
+        <label for="checkbox2id">CSS</label>
+        <br>
+        <input type="checkbox" name="checkbox3" id ="checkbox3id" value = "Javscript" tabindex="6">
+        <label for="checkbox3id">Javascript</label>
+        <br>
+        <br>
+        <input type="radio" name = "courses" id="course1" value="CPAN134">
+        <label for="course1">CPAN134</label>
+        <br>
+        <input type="radio" name = "courses" id="course1" value="CPAN133" >
+        <label for="course2" >CPAN133</label>
+        <br>
+        <br>
+        <select id="myCourses">
+            <option value="CPAN134">CPAN134</option>
+            <option value="CPAN133">CPAN133</option>
+            <option value="CPAN132">CPAN132</option>
+            <option value="CPAN131">CPAN131</option>
+        </select>
+        <br>
+        <br>
+        <input type="hidden" value="20" name="hiddenElement" id="myHiddenElement">
+        Comments
+        <br>
+        <textarea name="comments" id="commentId" rows="3" cols="20" accesskey="I"></textarea>
+       <br>
+        <input type = "submit" name = "myButton" id="myButton" Value="Submit">
+        <input type = "reset" name = "myResetButton" id="myResetButton" Value="Reset">
+        </form> 
+        <br>
+        <br>
+        <label for="myspinner">Choose between 10 and 20</label>
+        <input type="number"  min="10" max="20" id="mySpinner"  name="spinner">
+        <br>
+        <br>
+
+    <br>
+    <br>
+    <br>
+        <audio controls autoplay>
+        <source src="original.mp3" type="audio/mp3">
+
+    </audio>
+
+    </body>
+</html>
