@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TonglongHuangLab6</title>
+  </head>
+  <script>
+    function validate() {
+      const firstname = document.getElementById("firstname").value;
+      const lastname = document.getElementById("lastname").value;
+      const mark1 = document.getElementById("mark1").value;
+      const mark2 = document.getElementById("mark2").value;
+      const mark3 = document.getElementById("mark3").value;
+      const error = [];
+
+      if (!firstname) {
+        error.push("Please enter your first name.");
+      }
+
+      if (!lastname) {
+        error.push("Please enter your last name.");
+      }
+
+      if ((mark1 < 0, mark1 > 100)) {
+        error.push("Mark 1 must be between 0 and 100.");
+      } else if (mark1 < 0) error.push("Mark 1 must be greater than 0.");
+
+      if ((mark2 < 0, mark2 > 100)) {
+        error.push("Mark 2 must be between 0 and 100.");
+      } else if (mark2 < 0) error.push("Mark 2 must be greater than 0.");
+
+      if ((mark3 < 0, mark3 > 100)) {
+        error.push("Mark 3 must be between 0 and 100.");
+      } else if (mark3 < 0) error.push("Mark 3 must be greater than 0.");
+
+      const errorSpan = document.getElementById("error");
+      errorSpan.innerHTML = error.join("<br>");
+    }
+
+    function printResult() {
+      const firstname = document.getElementById("firstname").value;
+      const lastname = document.getElementById("lastname").value;
+      const mark1 = Number(document.getElementById("mark1").value);
+      const mark2 = Number(document.getElementById("mark2").value);
+      const mark3 = Number(document.getElementById("mark3").value);
+      const total = mark1 + mark2 + mark3;
+      const average = total / 3;
+      const resultprint = document.getElementById("result");
+
+      if (average >= 90) {
+        resultprint.innerHTML = `${firstname} ${lastname} - AWESOME`;
+      } else if (average >= 80) {
+        resultprint.innerHTML = `${firstname} ${lastname} - VERY GOOD`;
+      } else if (average >= 50) {
+        resultprint.innerHTML = `${firstname} ${lastname} - OKAY`;
+      } else {
+        resultprint.innerHTML = `${firstname} ${lastname} - FAILED`;
+      }
+    }
+  </script>
+  <body>
+    <label for="firstname">First Name:</label>
+    <input type="text" id="firstname" required />
+    <br />
+    <label for="lastname">Last Name:</label>
+    <input type="text" id="lastname" required />
+    <br />
+    <label for="mark1">Mark 1:</label>
+    <input type="text" id="mark1" required />
+    <br />
+    <label for="mark2">Mark 2:</label>
+    <input type="text" id="mark2" required />
+    <br />
+    <label for="mark3">Mark 3:</label>
+    <input type="text" id="mark3" required />
+    <br />
+
+    <button type="button" onclick="validate()">Validate</button>
+    <button type="button" onclick="printResult()">Print Result</button>
+
+    <p id="result"></p>
+    <span id="error"></span>
+  </body>
+</html>
